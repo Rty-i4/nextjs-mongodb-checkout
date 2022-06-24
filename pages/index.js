@@ -85,6 +85,13 @@ const useStyles = createStyles((theme) => {
       },
     },
 
+    inpt: {
+      input: {
+        boxShadow:
+          "rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px",
+      },
+    },
+
     control: {
       [BREAKPOINT]: {
         flex: 1,
@@ -167,6 +174,7 @@ export default function Home() {
                   label="Card Number"
                   placeholder="Card Number"
                   type="number"
+                  className={classes.inpt}
                   value={cardNumber}
                   onChange={(e) => {
                     setErrors({});
@@ -182,6 +190,7 @@ export default function Home() {
                   placeholder="MM/YYYY"
                   inputFormat="MM/YYYY"
                   labelFormat="MM/YYYY"
+                  className={classes.inpt}
                   onChange={(e) => {
                     setErrors({});
 
@@ -198,6 +207,7 @@ export default function Home() {
                 label="CVV"
                 placeholder="CVV"
                 type="number"
+                className={classes.inpt}
                 value={cvv}
                 onChange={(e) => {
                   setErrors({});
@@ -214,6 +224,7 @@ export default function Home() {
                 label="Amount"
                 placeholder="Amount"
                 type="number"
+                className={classes.inpt}
                 value={amount}
                 onChange={(e) => {
                   setErrors({});
@@ -234,7 +245,7 @@ export default function Home() {
                     amount.length < 1
                   }
                 >
-                  Submit
+                  Purchase
                 </Button>
               </Group>
             </div>
